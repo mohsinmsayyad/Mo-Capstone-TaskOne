@@ -57,9 +57,8 @@ public class RegistrationPageTest {
     public void NewUserRegistrationPage() throws InterruptedException, IOException {
         test = extent.createTest("NewUserRegistrationPage", "Test Passed");
         registration = new Registration(driver);
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         registration.clickAccount();
-        //Thread.sleep(3000);
         registration.clickRegister();
         System.out.println(registration.getTextLogIn());
         String expected = "Sign up";
@@ -96,7 +95,7 @@ public class RegistrationPageTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         registration.clickAccount();
         registration.clickRegister();
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         registration.sendFirstName("Mohsin");
         registration.sendLastName("Sayyad");
         registration.sendEmail("mohsinsayyadmailcom");
@@ -118,44 +117,21 @@ public class RegistrationPageTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         //registration.clickAccount();
         registration.clickRegister();
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         registration.clickRegistration();
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         String expected = "Sorry! Please try that again.";
         String actual = registration.getErrorMessage();
         Assert.assertEquals(actual,expected);
     }
 
-    /*@Test(priority = 4)
-    public void negativeTestingForMandatoryFields() throws InterruptedException, IOException {
-        test = extent.createTest("emailValidation", "Test fail");
-        registration = new Registration(driver);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        //registration.clickAccount();
-        //registration.clickRegister();
-        Thread.sleep(4000);
-        registration.sendFirstName("");
-        registration.sendLastName("");
-        registration.sendEmail("");
-        registration.sendPassword("");
-        registration.clickRegistration();
-        System.out.println(registration.getErrorMessage());
-        Thread.sleep(6000);
-        String expected = "Sorry! Please try that again.";
-        String actual = registration.getErrorMessage();
-        Assert.assertEquals(actual,expected);
-        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file,new File("src/test/resources/screenShots/image.png"));
-    }*/
-
-    //TC 005 Verify if the password required rules are not satisfied in the password
     @Test(priority = 4, enabled = false)
     public void negativeTestingForLogin() throws InterruptedException, IOException {
         registration = new Registration(driver);
         registration.clickAccount();
         registration.sendEmailLogIn("moh3@email.com");
         registration.sendPassLogIn("1234");
-        Thread.sleep(6000);
+        Thread.sleep(3000);
         registration.clickOnLogIn();
         System.out.println(registration.getWrongPassMessage());
         String expected = "Sorry! Please try that again.";

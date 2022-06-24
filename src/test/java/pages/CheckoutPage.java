@@ -50,13 +50,8 @@ public class CheckoutPage {
 
 
     //*[@id="card-fields-expiry-o21p9t31wti00000-scope-www.alexandnova.com"]
-
-
     //*[@id="card-fields-name-gzkfr9tbk5000000-scope-www.alexandnova.com"]
-
-
     //*[@id="card-fields-verification_value-sw6kznu9wv000000-scope-www.alexandnova.com"]
-
 
 
     public CheckoutPage(WebDriver driver) {
@@ -208,6 +203,4 @@ public class CheckoutPage {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,44");
     }
-
-
 }

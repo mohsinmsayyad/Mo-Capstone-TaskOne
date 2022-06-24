@@ -10,9 +10,9 @@ public class CheckCartProduct {
 
     By total = By.xpath("//*[@id='shopify-section-cart']/section/form/table/tbody/tr/td[4]/span/span");
 
-    By remove = By.xpath("//*[@id=\"shopify-section-cart\"]/section/form/table/tbody/tr/td[1]/a[2]");
+    By remove = By.xpath("//*[@id='shopify-section-cart']/section/form/table/tbody/tr/td[1]/a[2]");
 
-    By empty = By.xpath("//*[@id=\"shopify-section-header\"]/section/header/div[1]/div/div[2]/div[2]/a/span[2]");
+    By empty = By.xpath("//*[@id='shopify-section-header']/section/header/div[1]/div/div[2]/div[2]/a/span[2]");
 
 
 
