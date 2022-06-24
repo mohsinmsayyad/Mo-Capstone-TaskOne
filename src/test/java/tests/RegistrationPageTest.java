@@ -69,15 +69,17 @@ public class RegistrationPageTest {
         FileUtils.copyFile(file,new File("src/test/resources/screanShots/image.png"));
     }
     //TC 002 Verify Register New User.
-    @Test(enabled = false)
+    @Test(priority = 2)
     public void verifyRegistrationUserTest() throws IOException {
         test = extent.createTest("verifyRegistrationUserTest", "Test Passed");
         registration = new Registration(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        registration.sendFirstName("Mohsin");
-        registration.sendLastName("Sayyad");
-        registration.sendEmail("moh3@email.com");
-        registration.sendPassword("12345");
+        registration.sendFirstName("John");
+        registration.sendLastName("Fink");
+        registration.sendEmail("testAtgmail.com");
+        //registration.sendEmail("moh3@email.com");
+        registration.sendPassword("P@ssword");
+        //registration.sendPassword("12345");
         registration.clickRegistration();
         System.out.println(registration.getTextLogPage());
         String expected1 = "Sign up";
@@ -88,7 +90,7 @@ public class RegistrationPageTest {
         FileUtils.copyFile(file,new File("src/test/resources/screenShots/image.png"));
     }
     //TC 003 Email validation
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void emailValidation() throws IOException, InterruptedException {
         test = extent.createTest("emailValidation", "Test fail");
         registration = new Registration(driver);
@@ -110,7 +112,7 @@ public class RegistrationPageTest {
         FileUtils.copyFile(file,new File("src/test/resources/screenShots/image.png"));
     }
     //TC 004 Required / mandatory fields
-    @Test(priority = 3)
+    @Test(priority = 4)
     public void RequiredMandatoryFields() throws InterruptedException {
         test = extent.createTest("emailValidation", "Test fail");
         registration = new Registration(driver);
@@ -125,7 +127,7 @@ public class RegistrationPageTest {
         Assert.assertEquals(actual,expected);
     }
 
-    @Test(priority = 4, enabled = false)
+    @Test(priority = 5)
     public void negativeTestingForLogin() throws InterruptedException, IOException {
         registration = new Registration(driver);
         registration.clickAccount();

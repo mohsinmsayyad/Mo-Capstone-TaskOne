@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Mo-Capstone-TaskTwo"
-           tests="3"
+           tests="5"
            failures="0"
            errors="0"
            skipped="0"
-           time="79.127">
+           time="89.504">
     <properties></properties>
 
 
 
             <testcase
+                name="emailValidation"
+                time="26.879"
+                classname="tests.RegistrationPageTest">
+            </testcase>
+            <testcase
                 name="RequiredMandatoryFields"
-                time="22.218"
+                time="17.557"
                 classname="tests.RegistrationPageTest">
             </testcase>
             <testcase
                 name="NewUserRegistrationPage"
-                time="18.055"
+                time="17.070"
                 classname="tests.RegistrationPageTest">
             </testcase>
             <testcase
-                name="emailValidation"
-                time="38.854"
+                name="verifyRegistrationUserTest"
+                time="10.964"
+                classname="tests.RegistrationPageTest">
+            </testcase>
+            <testcase
+                name="negativeTestingForLogin"
+                time="17.034"
                 classname="tests.RegistrationPageTest">
             </testcase>
 </testsuite>
