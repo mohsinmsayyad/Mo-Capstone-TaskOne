@@ -39,9 +39,9 @@ public class CheckoutTest {
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/TestReport.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Host Name", "Nabila.home-server.local");
+        extent.setSystemInfo("Host Name", "MoSayyad.home-server.local");
         extent.setSystemInfo("Environment", "QA");
-        extent.setSystemInfo("User Name", "Nabila");
+        extent.setSystemInfo("User Name", "MoSayyad");
         htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setDocumentTitle("AutomationTesting Google download pictures report");
         htmlReporter.config().setReportName("Google Search and Download Pictures Report");

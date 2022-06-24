@@ -36,9 +36,9 @@ public class RegistrationPageTest {
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/registrationReport.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Host Name", "Nabila.home-server.local");
+        extent.setSystemInfo("Host Name", "MoSayyad.home-server.local");
         extent.setSystemInfo("Environment", "QA");
-        extent.setSystemInfo("User Name", "Nabila");
+        extent.setSystemInfo("User Name", "MoSayyad");
         htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setDocumentTitle("AutomationTesting Google download pictures report");
         htmlReporter.config().setReportName("Google Search and Download Pictures Report");
@@ -75,9 +75,9 @@ public class RegistrationPageTest {
         test = extent.createTest("verifyRegistrationUserTest", "Test Passed");
         registration = new Registration(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        registration.sendFirstName("nabi1");
-        registration.sendLastName("azz");
-        registration.sendEmail("nab3@email.com");
+        registration.sendFirstName("Mohsin");
+        registration.sendLastName("Sayyad");
+        registration.sendEmail("moh3@email.com");
         registration.sendPassword("12345");
         registration.clickRegistration();
         System.out.println(registration.getTextLogPage());
@@ -97,9 +97,9 @@ public class RegistrationPageTest {
         registration.clickAccount();
         registration.clickRegister();
         Thread.sleep(4000);
-        registration.sendFirstName("nab");
-        registration.sendLastName("azz");
-        registration.sendEmail("nabemailcom");
+        registration.sendFirstName("Mohsin");
+        registration.sendLastName("Sayyad");
+        registration.sendEmail("mohsinsayyadmailcom");
         registration.sendPassword("12345");
         registration.clickRegistration();
         System.out.println(registration.getErrorMessage());
@@ -153,7 +153,7 @@ public class RegistrationPageTest {
     public void negativeTestingForLogin() throws InterruptedException, IOException {
         registration = new Registration(driver);
         registration.clickAccount();
-        registration.sendEmailLogIn("nab3@email.com");
+        registration.sendEmailLogIn("moh3@email.com");
         registration.sendPassLogIn("1234");
         Thread.sleep(6000);
         registration.clickOnLogIn();

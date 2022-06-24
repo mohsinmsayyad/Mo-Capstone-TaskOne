@@ -36,7 +36,7 @@ public class LoginRegisteredUserTest {
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/loginTest.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Host Name", "Mo.home-server.local");
+        extent.setSystemInfo("Host Name", "MoSayyad.home-server.local");
         extent.setSystemInfo("Environment", "QA");
         extent.setSystemInfo("User Name", "MoSayyad");
         htmlReporter.config().setChartVisibilityOnOpen(true);
