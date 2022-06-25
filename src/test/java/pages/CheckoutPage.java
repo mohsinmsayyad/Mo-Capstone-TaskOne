@@ -36,7 +36,8 @@ public class CheckoutPage {
 
 
     By creditCard = By.id("number");
-    By nameOnCard = By.xpath("//head/meta[4]");
+    By nameOnCard = By.xpath("/html/body/form/input[2]");
+    //By nameOnCard = By.xpath("//head/meta[4]");
     //By nameOnCard = By.id("name");
     By expirationDate = By.id("expiry");
     By securityCode = By.id("verification_value");
@@ -46,6 +47,8 @@ public class CheckoutPage {
     //html/body/div/div/div/main/div[1]/div/form/div[5]/div[1]/button
     //html/body/div/div/div/main/div[1]/div/form/div[5]/div[1]
     //*[@id="continue_button"]
+
+    //By paymentMessage = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/fieldset/div[1]/div[2]/label");
     By paymentMessage = By.xpath("//h2[@id='main-header']");
     //By paymentMessage = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/div/p/text");
 

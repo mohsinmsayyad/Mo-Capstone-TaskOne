@@ -4,34 +4,34 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="89.504">
+           time="87.519">
     <properties></properties>
 
 
 
             <testcase
-                name="emailValidation"
-                time="26.879"
-                classname="tests.RegistrationPageTest">
-            </testcase>
-            <testcase
-                name="RequiredMandatoryFields"
-                time="17.557"
-                classname="tests.RegistrationPageTest">
-            </testcase>
-            <testcase
-                name="NewUserRegistrationPage"
-                time="17.070"
-                classname="tests.RegistrationPageTest">
-            </testcase>
-            <testcase
                 name="verifyRegistrationUserTest"
-                time="10.964"
+                time="12.721"
+                classname="tests.RegistrationPageTest">
+            </testcase>
+            <testcase
+                name="emailValidation"
+                time="25.564"
                 classname="tests.RegistrationPageTest">
             </testcase>
             <testcase
                 name="negativeTestingForLogin"
-                time="17.034"
+                time="8.576"
+                classname="tests.RegistrationPageTest">
+            </testcase>
+            <testcase
+                name="RequiredMandatoryFields"
+                time="24.401"
+                classname="tests.RegistrationPageTest">
+            </testcase>
+            <testcase
+                name="NewUserRegistrationPage"
+                time="16.257"
                 classname="tests.RegistrationPageTest">
             </testcase>
 </testsuite>

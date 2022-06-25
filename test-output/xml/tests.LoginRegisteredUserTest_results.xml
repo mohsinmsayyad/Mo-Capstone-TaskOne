@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="54.885">
+           time="43.264">
     <properties></properties>
 
 
 
             <testcase
                 name="verifyIncorrectEmailCorrectPass"
-                time="24.905"
+                time="17.862"
                 classname="tests.LoginRegisteredUserTest">
             </testcase>
             <testcase
                 name="LogInUser"
-                time="29.980"
+                time="25.402"
                 classname="tests.LoginRegisteredUserTest">
             </testcase>
 </testsuite>

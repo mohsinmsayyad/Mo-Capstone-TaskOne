@@ -3,7 +3,7 @@
 <suite name = "Suite">
     <test name="SearchFeatureTest Module">
         <classes>
-            <class name="tests.RegistrationPageTest "/>
+            <class name="tests.RegistrationPageTest"/>
         </classes>
     </test>
 </suite>

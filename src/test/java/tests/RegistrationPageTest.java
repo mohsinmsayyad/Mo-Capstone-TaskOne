@@ -117,7 +117,7 @@ public class RegistrationPageTest {
         test = extent.createTest("emailValidation", "Test fail");
         registration = new Registration(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        //registration.clickAccount();
+        registration.clickAccount();
         registration.clickRegister();
         Thread.sleep(3000);
         registration.clickRegistration();
