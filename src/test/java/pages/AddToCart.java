@@ -7,7 +7,10 @@ public class AddToCart {
     WebDriver driver;
 
 
-    By productPrice = By.xpath("//*[@id=\"isp_search_results_container\"]/li[1]/div[2]/div[2]/span");
+    By productPrice = By.xpath("//*[@id=\"isp_search_results_container\"]/li[2]/div[2]/div[2]/span");
+            //By.xpath("///html/body/div[3]/div[2]/div[3]/div[5]/ul/li[2]/div[2]/div[2]/span");
+
+                                            // //*[@id="isp_search_results_container"]/li[1]/div[2]/div[2]/span
     By selectProduct = By.xpath("//*[@id=\"shopify-section-section-2\"]/section/div/article[1]/div/p/a");
     By size = By.xpath("//*[@id=\"bcpo-select-option-0\"]/div[1]/label");
     By color = By.xpath("//*[@id=\"bcpo-select-option-1\"]/div[2]/label");
@@ -21,7 +24,8 @@ public class AddToCart {
     //*[@id="shopify-section-header"]/section/header/div[2]/div[4]/a
 
 
-    By confirmationText = By.xpath("//*[@id=\"shopify-section-cart\"]/section/form/table/tbody/tr/td[1]/div/span[1]/a");
+    By confirmationText = By.xpath("/html/body/div[3]/div[1]/div/span[3]");
+    // By confirmationText = By.xpath("//*[@id=\"shopify-section-cart\"]/section/form/table/tbody/tr/td[1]/div/span[1]/a");
 
 
     By increaseQuantity = By.id("updates_30882862858293");

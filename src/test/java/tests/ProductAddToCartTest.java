@@ -11,10 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.AddToCart;
 import pages.CheckCartProduct;
 import pages.SearchProduct;
@@ -33,7 +30,6 @@ public class ProductAddToCartTest {
     AddToCart addToCart;
     SearchProduct searchProduct;
 
-
     CheckCartProduct checkCartProduct;
 
 
@@ -47,9 +43,9 @@ public class ProductAddToCartTest {
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/productAddReport.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Host Name", "MoSayyad.home-server.local");
+        extent.setSystemInfo("Host Name", "Mo Sayyad.home-server.local");
         extent.setSystemInfo("Environment", "QA");
-        extent.setSystemInfo("User Name", "MoSayyad");
+        extent.setSystemInfo("User Name", "Mo Sayyad");
         htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setDocumentTitle("AutomationTesting Google download pictures report");
         htmlReporter.config().setReportName("Google Search and Download Pictures Report");
@@ -69,7 +65,7 @@ public class ProductAddToCartTest {
 
 
     //Verify the prices must show up for products on the product page
-    @Test(enabled = false)
+    @Test(priority = 1)
     public void verifyPrice() throws IOException {
         test = extent.createTest("verifyPrice", "Test Passed");
         searchProduct = new SearchProduct(driver);
@@ -86,7 +82,7 @@ public class ProductAddToCartTest {
 
     }
     //Add Product to the cart and verify if product Is added to cart page
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void addProductToCart() throws InterruptedException, IOException {
         test = extent.createTest("addProductToCart", "Test Passed");
         addToCart = new AddToCart(driver);
@@ -110,7 +106,7 @@ public class ProductAddToCartTest {
 
     }
     //Refresh the page and verify if items are still present in the cart
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void refreshAndCheck() throws InterruptedException, IOException {
         test = extent.createTest("refreshAndCheck", "Test Passed");
         addToCart = new AddToCart(driver);
@@ -125,8 +121,8 @@ public class ProductAddToCartTest {
         FileUtils.copyFile(file,new File("src/test/resources/screenShots/image.png"));
     }
     //Increase the quantity of the product and verify if it is showing up in cart
-    @Test(priority = 3)
-    public void addedToCartQuantityCheck() throws InterruptedException {
+    @Test(priority = 4)
+    public void increase_the_quantity_in_the_cart() throws InterruptedException {
         test = extent.createTest("addedToCartQuantityCheck", "Test Passed");
         addToCart = new AddToCart(driver);
         addToCart.changeProductQuantity("3");
@@ -138,7 +134,7 @@ public class ProductAddToCartTest {
         Assert.assertEquals(actual,expected);
     }
     //Verify Quantity of the products matches with amount displayed in cart
-    @Test(priority = 4)
+    @Test(priority = 5)
     public void productsValueEqualsTotalPrice() throws InterruptedException {
         test = extent.createTest("productsValueEqualsTotalPrice", "Test Passed");
         checkCartProduct = new CheckCartProduct(driver);
@@ -149,7 +145,7 @@ public class ProductAddToCartTest {
         Assert.assertEquals(expected, actual);
     }
     //Remove Product from cart: Verify that the Product should be removed from the cart and the Cart icon should show 0 items.
-    @Test(priority = 5)
+    @Test(priority = 6)
     public void emptyCart() throws InterruptedException {
         test = extent.createTest("emptyCart", "Test Passed");
         Thread.sleep(4000);

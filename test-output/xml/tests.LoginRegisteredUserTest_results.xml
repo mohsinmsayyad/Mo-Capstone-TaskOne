@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Mo-Capstone-TaskTwo"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="47.514">
+           time="54.885">
     <properties></properties>
 
 
 
             <testcase
                 name="verifyIncorrectEmailCorrectPass"
-                time="47.514"
+                time="24.905"
+                classname="tests.LoginRegisteredUserTest">
+            </testcase>
+            <testcase
+                name="LogInUser"
+                time="29.980"
                 classname="tests.LoginRegisteredUserTest">
             </testcase>
 </testsuite>

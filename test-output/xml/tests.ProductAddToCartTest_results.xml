@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Mo-Capstone-TaskTwo"
-           tests="5"
+           tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="37.363">
+           time="19.964">
     <properties></properties>
 
 
 
             <testcase
-                name="productsValueEqualsTotalPrice"
-                time="3.083"
-                classname="tests.ProductAddToCartTest">
-            </testcase>
-            <testcase
-                name="addedToCartQuantityCheck"
-                time="5.129"
-                classname="tests.ProductAddToCartTest">
-            </testcase>
-            <testcase
-                name="emptyCart"
-                time="9.861"
-                classname="tests.ProductAddToCartTest">
-            </testcase>
-            <testcase
-                name="refreshAndCheck"
-                time="6.130"
-                classname="tests.ProductAddToCartTest">
-            </testcase>
-            <testcase
                 name="addProductToCart"
-                time="13.160"
+                time="19.964"
                 classname="tests.ProductAddToCartTest">
             </testcase>
 </testsuite>

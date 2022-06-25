@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Mo-Capstone-TaskTwo"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="24.625">
+           time="17.292">
     <properties></properties>
 
 
 
             <testcase
+                name="emptySearch"
+                time="2.274"
+                classname="tests.SearchProductsPageTest">
+            </testcase>
+            <testcase
                 name="SearchProductOnHomePage"
-                time="24.625"
+                time="15.018"
                 classname="tests.SearchProductsPageTest">
             </testcase>
 </testsuite>

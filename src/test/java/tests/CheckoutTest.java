@@ -59,11 +59,11 @@ public class CheckoutTest {
         test = extent.createTest("giftCardCheck", "Test Passed");
         addToCart = new AddToCart(driver);
         addToCart.clickSelectProduct();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         addToCart.selectSize();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         addToCart.selectColor();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         checkoutPage = new CheckoutPage(driver);
         //checkoutPage.scrollDown();
         addToCart.addToCart();
@@ -86,13 +86,13 @@ public class CheckoutTest {
         checkoutPage.setSendFirstName("Mo");
         checkoutPage.setSendLastName("Sayyad");
         checkoutPage.setSendAddress("0123 Denver St");
-        checkoutPage.setSendCity("Denver");
-        checkoutPage.setSendZip("80010");
-        Thread.sleep(4000);
+        checkoutPage.setSendCity("Katy");
+        checkoutPage.setSendZip("77450");
+        Thread.sleep(2000);
         checkoutPage.clickContinue();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         checkoutPage.clickContinueToPay();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         checkoutPage.assertVisaCard();
 
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -103,13 +103,13 @@ public class CheckoutTest {
     public void completingCheckOutProcess() throws InterruptedException, IOException {
         test = extent.createTest("completingCheckOutProcess", "Test Passed");
         checkoutPage = new CheckoutPage(driver);
-        Thread.sleep(20000);
+        Thread.sleep(1000);
         checkoutPage.switchFrameCard();
-        checkoutPage.sendCreditCardNumber("3698 521476 9874");
-        Thread.sleep(20000);
+        checkoutPage.sendCreditCardNumber("36985214769874");
+        Thread.sleep(1000);
         checkoutPage.switchFrameName();
         checkoutPage.sendName("john fink");
-        Thread.sleep(20000);
+        Thread.sleep(1000);
         checkoutPage.switchFrameDate();
         checkoutPage.sendExpDate("06/22");
         checkoutPage.switchFrameCode();

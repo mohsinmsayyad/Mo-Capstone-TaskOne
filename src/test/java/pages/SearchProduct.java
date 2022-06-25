@@ -14,9 +14,12 @@ public class SearchProduct {
 
 
     By resultText = By.xpath("//*[@id=\"keyboard-nav-3\"]/h1/span[2]");
+    //By resultText = By.linkText("Search results for ");
 
 
     By emptySearchText = By.xpath("//*[@id=\"keyboard-nav-3\"]/div[2]/p");
+    //By emptySearchText = By.xpath("/html/body/div[2]/section/header/div[2]/div[4]/form/input[2]");
+    ///html/body/div[2]/section/header/div[2]/div[4]/form/input[2]
 
 
     public SearchProduct(WebDriver driver) {
@@ -39,4 +42,3 @@ public class SearchProduct {
         return driver.findElement(emptySearchText).getText();
     }
 }
-

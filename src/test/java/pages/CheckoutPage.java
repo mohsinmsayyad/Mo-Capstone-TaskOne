@@ -20,7 +20,8 @@ public class CheckoutPage {
 
 
     By giftCart = By.xpath("//*[@id=\"checkout_reduction_code\"]");
-    By email = By.id("checkout_email");
+    By email = By.cssSelector("#checkout_email");
+    //By email = By.id("checkout_email");
     By firstName = By.id("checkout_shipping_address_first_name");
     By lastName = By.id("checkout_shipping_address_last_name");
     By address = By.id("checkout_shipping_address_address1");
@@ -28,7 +29,9 @@ public class CheckoutPage {
     By zip = By.xpath("//*[@id=\"checkout_shipping_address_zip\"]");
     By continueToShip = By.id("continue_button");
     By continueToPay = By.xpath("//*[@id=\"continue_button\"]");
-    By shopPay = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/fieldset/div[4]/div[2]/label/span");
+    //By cardOptions = By.xpath("//header/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[1]/div[1]/span[2]/*[1]");
+    //By shopPay = By.cssSelector("div.content:nth-child(4) div.wrap div.main header.main__header div.shown-if-js:nth-child(4) div.dynamic-checkout div.dynamic-checkout__content div.dynamic-checkout__buttons div.shopify-cleanslate:nth-child(2) div._38ksdFFHosgt4hh6EjDuLm._3mgStMpRn3ZERlUsxma1Bc ul._1axiYDNHVzBHv3h8UhmWtr li.kEwctmM5pguv6XkPR8mx6:nth-child(1) > div._1LP9NPTft85QosIXd3_zOV._3G6VJhJYno-AX3-X38f1TA._2zarRkvJ2j83NID3Q3t0Ix._3xia0N5Q9Mk6-VTLoOX95a");
+    //By shopPay = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/fieldset/div[4]/div[2]/label/span");
     //html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/fieldset/div[4]/div[2]/label/span
 
 
@@ -36,11 +39,14 @@ public class CheckoutPage {
     By nameOnCard = By.id("name");
     By expirationDate = By.id("expiry");
     By securityCode = By.id("verification_value");
+
+    By cardOptions = By.xpath("//body/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[1]/div[2]/div[1]/ul[1]/li[1]");
     By payNow = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[5]/div[1]/button");
     //html/body/div/div/div/main/div[1]/div/form/div[5]/div[1]/button
     //html/body/div/div/div/main/div[1]/div/form/div[5]/div[1]
     //*[@id="continue_button"]
-    By paymentMessage = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/div/p/text()");
+    By paymentMessage = By.xpath("//h2[@id='main-header']");
+    //By paymentMessage = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/div/p/text");
 
 
     By iFrameCard = By.xpath("//iframe[contains(@id,'card-fields-number-')]");
@@ -122,9 +128,11 @@ public class CheckoutPage {
 
 
     public void assertVisaCard() {
-        String shopPayOption = driver.findElement(shopPay).getText();
+        //String shopPayOption = driver.findElement(shopPay).getText();
+        String shopPayOption = driver.findElement(cardOptions).getText();
         System.out.println(shopPayOption);
-        if (shopPayOption.contains("Shop Pay")) {
+        if (shopPayOption.contains("VISA")) {
+        //if (shopPayOption.contains("Shop Pay")) {
             assert true;
         } else {
             assert false;

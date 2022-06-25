@@ -11,10 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.SearchProduct;
 
 import java.io.File;
@@ -51,7 +48,7 @@ public class SearchProductsPageTest {
     }
 
 
-    @BeforeTest
+    @BeforeMethod
     public void openBrowser() throws IOException {
         driver = SelectBrowser.StartBrowser("Chrome");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
@@ -66,6 +63,7 @@ public class SearchProductsPageTest {
         searchProduct = new SearchProduct(driver);
         searchProduct.sendKeySearchPr("baby shoes");
         searchProduct.clickSearchButton();
+
         System.out.println(searchProduct.getSearchText());
         String actual = "baby shoes";
         String expected = searchProduct.getSearchText();
@@ -75,14 +73,34 @@ public class SearchProductsPageTest {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file,new File("src/test/resources/screenShots/image.png"));
     }
-
-
-    //Without entering anything in the search box click on the Search button.
-    @Test(enabled = false)
+/*
+    //EmptySearch
+    @Test(priority = 2)
     public void emptySearch() throws IOException {
         test = extent.createTest("emptySearch", "Test Passed");
         searchProduct = new SearchProduct(driver);
         searchProduct.clickSearchButton();
+
+        System.out.println(searchProduct.getEmptySearchText());
+        String actual = "You haven't performed a search. " +
+                "Use the search box at the top of the page to search for a product.";
+        String expected = searchProduct.getEmptySearchText();
+        Assert.assertEquals(actual,expected);
+
+
+        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(file,new File("src/test/resources/screenShots/image.png"));
+    }
+*/
+
+
+    //Without entering anything in the search box click on the Search button.
+   @Test(priority = 2)
+     public void emptySearch() throws IOException {
+        test = extent.createTest("emptySearch", "Test Passed");
+        searchProduct = new SearchProduct(driver);
+        searchProduct.clickSearchButton();
+
         System.out.println(searchProduct.getEmptySearchText());
         String actual = "You haven't performed a search. Use the search box at the top of the page to search for a product.";
         String expected = searchProduct.getEmptySearchText();
@@ -92,10 +110,11 @@ public class SearchProductsPageTest {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file,new File("src/test/resources/screenShots/image.png"));
     }
+
     @AfterSuite
     public void tearDown()
     {
         extent.flush();
+        driver.quit();
     }
-
 }
