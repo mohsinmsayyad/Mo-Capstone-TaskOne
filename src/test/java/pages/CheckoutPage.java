@@ -36,7 +36,8 @@ public class CheckoutPage {
 
 
     By creditCard = By.id("number");
-    By nameOnCard = By.id("name");
+    By nameOnCard = By.xpath("//head/meta[4]");
+    //By nameOnCard = By.id("name");
     By expirationDate = By.id("expiry");
     By securityCode = By.id("verification_value");
 
