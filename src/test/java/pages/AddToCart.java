@@ -24,8 +24,8 @@ public class AddToCart {
     //*[@id="shopify-section-header"]/section/header/div[2]/div[4]/a
 
 
-    By confirmationText = By.xpath("/html/body/div[3]/div[1]/div/span[3]");
-    // By confirmationText = By.xpath("//*[@id=\"shopify-section-cart\"]/section/form/table/tbody/tr/td[1]/div/span[1]/a");
+    //confirmationText = By.xpath("/html/body/div[3]/div[1]/div/span[3]");
+    By confirmationText = By.xpath("//*[@id=\"shopify-section-cart\"]/section/form/table/tbody/tr/td[1]/div/span[1]/a");
 
 
     By increaseQuantity = By.id("updates_30882862858293");

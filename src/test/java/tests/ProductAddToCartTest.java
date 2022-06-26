@@ -66,8 +66,8 @@ public class ProductAddToCartTest {
 
     //Verify the prices must show up for products on the product page
     @Test(priority = 1)
-    public void verifyPrice() throws IOException {
-        test = extent.createTest("verifyPrice", "Test Passed");
+    public void verifyThePrices() throws IOException {
+        test = extent.createTest("verifyThePrices", "Test Passed");
         searchProduct = new SearchProduct(driver);
         searchProduct.sendKeySearchPr("baby shoes");
         searchProduct.clickSearchButton();
@@ -84,7 +84,7 @@ public class ProductAddToCartTest {
     //Add Product to the cart and verify if product Is added to cart page
     @Test(priority = 2)
     public void addProductToCart() throws InterruptedException, IOException {
-        test = extent.createTest("addProductToCart", "Test Passed");
+        test = extent.createTest("addAProductToTheCart", "Test Passed");
         addToCart = new AddToCart(driver);
         addToCart.clickSelectProduct();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
@@ -107,8 +107,8 @@ public class ProductAddToCartTest {
     }
     //Refresh the page and verify if items are still present in the cart
     @Test(priority = 3)
-    public void refreshAndCheck() throws InterruptedException, IOException {
-        test = extent.createTest("refreshAndCheck", "Test Passed");
+    public void refreshAndCheckTheCart() throws InterruptedException, IOException {
+        test = extent.createTest("refreshAndCheckTheCart", "Test Passed");
         addToCart = new AddToCart(driver);
         addToCart.clickCart();
         Thread.sleep(3000);
@@ -122,8 +122,8 @@ public class ProductAddToCartTest {
     }
     //Increase the quantity of the product and verify if it is showing up in cart
     @Test(priority = 4)
-    public void increase_the_quantity_in_the_cart() throws InterruptedException {
-        test = extent.createTest("addedToCartQuantityCheck", "Test Passed");
+    public void increase_And_Verify_the_cart() throws InterruptedException {
+        test = extent.createTest("increase_And_Verify_the_cart", "Test Passed");
         addToCart = new AddToCart(driver);
         addToCart.changeProductQuantity("3");
         addToCart.updateCartQuantity();
@@ -135,8 +135,8 @@ public class ProductAddToCartTest {
     }
     //Verify Quantity of the products matches with amount displayed in cart
     @Test(priority = 5)
-    public void productsValueEqualsTotalPrice() throws InterruptedException {
-        test = extent.createTest("productsValueEqualsTotalPrice", "Test Passed");
+    public void Total_Products_Equals_Total_Price() throws InterruptedException {
+        test = extent.createTest("Total_Products_Equals_Total_Price", "Test Passed");
         checkCartProduct = new CheckCartProduct(driver);
         System.out.println(checkCartProduct.assertTotal());
         Thread.sleep(3000);

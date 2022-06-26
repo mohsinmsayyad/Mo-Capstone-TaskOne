@@ -20,7 +20,7 @@ public class CheckoutPage {
 
 
     By giftCart = By.xpath("//*[@id=\"checkout_reduction_code\"]");
-    By email = By.cssSelector("#checkout_email");
+    By email = By.name("checkout[email]");
     //By email = By.id("checkout_email");
     By firstName = By.id("checkout_shipping_address_first_name");
     By lastName = By.id("checkout_shipping_address_last_name");
@@ -42,16 +42,17 @@ public class CheckoutPage {
     By expirationDate = By.id("expiry");
     By securityCode = By.id("verification_value");
 
-    By cardOptions = By.xpath("//body/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[1]/div[2]/div[1]/ul[1]/li[1]");
+    By cardOptions = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/fieldset/div[1]/div[2]/label");
+    //("//body/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[1]/div[2]/div[1]/ul[1]/li[1]");
     By payNow = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[5]/div[1]/button");
     //html/body/div/div/div/main/div[1]/div/form/div[5]/div[1]/button
     //html/body/div/div/div/main/div[1]/div/form/div[5]/div[1]
     //*[@id="continue_button"]
 
-    //By paymentMessage = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/fieldset/div[1]/div[2]/label");
-    By paymentMessage = By.xpath("//h2[@id='main-header']");
+    By paymentMessage = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/fieldset/div[1]/div[2]/label");
+    //By paymentMessage = By.xpath("//h2[@id='main-header']");
     //By paymentMessage = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/div/p/text");
-
+    //By paymentMessage = By.xpath("/html/body/div/div/div/main/div[1]/div/form/div[1]/div[2]/div[2]/div/p");
 
     By iFrameCard = By.xpath("//iframe[contains(@id,'card-fields-number-')]");
     By iFrameName = By.xpath("//iframe[contains(@id,'card-fields-name-')]");
@@ -68,16 +69,13 @@ public class CheckoutPage {
         this.driver = driver;
     }
 
-
     public void goToHomePage() {
         driver.findElement(home).click();
     }
 
-
     public void clickCheckout() {
         driver.findElement(checkout).click();
     }
-
 
     public void giftCartBoxCheck() {
         if (driver.findElement(giftCart).isEnabled()) {
@@ -187,7 +185,7 @@ public class CheckoutPage {
     {
         List<WebElement> elements = driver.findElements(By.tagName("iframe"));
         int numberOfTags = elements.size();
-        System.out.println("No. of iframes on this Web Page are: " +numberOfTags);
+        System.out.println("iframes: " +numberOfTags);
         driver.switchTo().frame(driver.findElement(iFrameCard));
 
 
