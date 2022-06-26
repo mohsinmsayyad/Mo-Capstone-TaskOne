@@ -3,6 +3,10 @@
 <suite name = "Suite">
     <test name="AlexNova">
         <classes>
+            <class name="tests.RegistrationPageTest"/>
+            <class name="tests.LoginRegisteredUserTest "/>
+            <class name="tests.ProductAddToCartTest "/>
+            <class name="tests.SearchProductsPageTest"/>
             <class name="tests.CheckoutTest"/>
         </classes>
     </test>
