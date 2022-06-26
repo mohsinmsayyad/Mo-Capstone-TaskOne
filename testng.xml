@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name = "Suite">
+<suite thread-count="1" verbose="1" name = "AlexNova" annotations="JDK" parallel="tests">
     <test name="AlexNova">
         <classes>
             <class name="tests.RegistrationPageTest"/>
