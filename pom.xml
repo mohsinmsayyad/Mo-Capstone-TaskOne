@@ -114,8 +114,6 @@
             </suiteXmlFiles>
           </configuration>
         </plugin>
-
-
       </plugins>
     </pluginManagement>
   </build>
