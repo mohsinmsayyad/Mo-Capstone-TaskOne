@@ -25,7 +25,8 @@ public class Registration {
     By passLogIn = By.name("customer[password]");
     By logInUser = By.xpath("//*[@id=\"customer_login\"]/div[3]/input");
     By welcomeText = By.xpath("//*[@id=\"keyboard-nav-3\"]/h1");
-    By errorMessageText = By.xpath("//*[@id=\"customer_login\"]/p");
+    //By errorMessageText = By.xpath("//*[@id=\"customer_login\"]/p");
+    By errorMessageText = By.xpath("//*[@id=\"ispbxii_1\"]");
     By wrongPassword = By.xpath("//*[@id=\"customer_login\"]/p");
 
     public Registration(WebDriver driver) {

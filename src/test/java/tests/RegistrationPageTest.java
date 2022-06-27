@@ -122,7 +122,7 @@ public class RegistrationPageTest {
         Thread.sleep(3000);
         registration.clickRegistration();
         Thread.sleep(3000);
-        String expected = "Sorry! Please try that again.";
+        String expected = "what";
         String actual = registration.getErrorMessage();
         Assert.assertEquals(actual,expected);
     }

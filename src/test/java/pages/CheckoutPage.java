@@ -97,8 +97,8 @@ public class CheckoutPage {
     }
 
 
-    public void setSendLastName(String Lname) {
-        driver.findElement(lastName).sendKeys(Lname);
+    public void setSendLastName(String LName) {
+        driver.findElement(lastName).sendKeys(LName);
     }
 
 
