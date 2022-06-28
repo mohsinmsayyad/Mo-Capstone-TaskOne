@@ -47,6 +47,7 @@ public class CheckoutTest {
         htmlReporter.config().setReportName("Google Search and Download Pictures Report");
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.DARK);
+
     }
     @BeforeTest
     public void openBrowser() throws IOException {
